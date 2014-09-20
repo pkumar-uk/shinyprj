@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<title></title>
+
+<script type="text/javascript">
+window.onload = function() {
+  var imgs = document.getElementsByTagName('img'), i, img;
+  for (i = 0; i < imgs.length; i++) {
+    img = imgs[i];
+    // center an image if it is the only element of its parent
+    if (img.parentElement.childElementCount === 1)
+      img.parentElement.style.textAlign = 'center';
+  }
+};
+</script>
+
+
+
+
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 13px;
+}
+
+body {
+  max-width: 800px;
+  margin: auto;
+  padding: 1em;
+  line-height: 20px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 {
+   font-size:2.2em;
+}
+
+h2 {
+   font-size:1.8em;
+}
+
+h3 {
+   font-size:1.4em;
+}
+
+h4 {
+   font-size:1.0em;
+}
+
+h5 {
+   font-size:0.9em;
+}
+
+h6 {
+   font-size:0.8em;
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre, img {
+  max-width: 100%;
+}
+pre {
+  overflow-x: auto;
+}
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code {
+  font-size: 92%;
+  border: 1px solid #ccc;
+}
+
+code[class] {
+  background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * {
+      background: transparent !important;
+      color: black !important;
+      filter:none !important;
+      -ms-filter: none !important;
+   }
+
+   body {
+      font-size:12pt;
+      max-width:100%;
+   }
+
+   a, a:visited {
+      text-decoration: underline;
+   }
+
+   hr {
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote {
+      padding-right: 1em;
+      page-break-inside: avoid;
+   }
+
+   tr, img {
+      page-break-inside: avoid;
+   }
+
+   img {
+      max-width: 100% !important;
+   }
+
+   @page :left {
+      margin: 15mm 20mm 15mm 10mm;
+   }
+
+   @page :right {
+      margin: 15mm 10mm 15mm 20mm;
+   }
+
+   p, h2, h3 {
+      orphans: 3; widows: 3;
+   }
+
+   h2, h3 {
+      page-break-after: avoid;
+   }
+}
+</style>
+
+
+
+</head>
+
+<body>
+<p><strong>&ldquo;Life Expectancy across Globe - Visual Representation&rdquo;</strong> is an application that makes it easy to understand Life expectancy data using visualization.</p>
+
+<p>The application uses R packages to achieve this. The list of Packages is given below:-    </p>
+
+<ul>
+<li>Shiny - for publishing the application<br/></li>
+<li>GoogleVis - for creating the interactive plots<br/></li>
+<li>plyr - for data subsetting<br/></li>
+</ul>
+
+<p>The data used by application comes from WHO for Life Expectancy across the world; which is measured under three categories:-   </p>
+
+<ul>
+<li>Life expectancy at birth<br/></li>
+<li>Healthy life expectancy at birth<br/></li>
+<li>Life expectancy at age 60<br/></li>
+</ul>
+
+<p>The application allows to filter data for visualization on the following categories using the navigation panel on the left:-    </p>
+
+<ul>
+<li><em>Type of life expectancy</em> - one can select a type that is measured by WHO<br/></li>
+<li><em>Life Expectancy greater than</em> - gives a slider to filter data on life expectancy years. Life expectancy greater than the selection is only shown in charts. Default is &#39;0&#39;<br/></li>
+<li><em>Select Years for which the data should be shown</em> : WHO has data for 3 years - 1990, 2000, 2012 (Note Trend Tab ignores this data)<br/></li>
+<li><em>Select population type</em> - WHO categorizes this into Male, Female and for both. selection can be done to select one<br/></li>
+<li><em>Select type of countries to be shown</em> - WHO categorizes countries into 4 income group - High Income Group, Upper Middle Income Group, Lower Middle Income Group, Lower Income Group<br/></li>
+</ul>
+
+<p>The application allows two types of visualization that is shown on tabs-</p>
+
+<ul>
+<li><strong>Geo</strong></li>
+<li><strong>Trend</strong></li>
+</ul>
+
+<p><strong>Geo</strong> shows Life Expectancy on GeoMap using GoogleVis kit. In addition to the GeoMap the data that is used to show the map is shown as tables below. Also, a table is shown that summarises data on Regions. The following type of analysis can be done:-</p>
+
+<ul>
+<li>Map colour of countries are based on Life expectancy. Moving the Mouse over the country will give name of the country along with life expectancy in year.<br/></li>
+<li>Tables columns can be clicked to sort on a column<br/></li>
+<li>Navigation Panel can be used to filter data<br/></li>
+</ul>
+
+<p><strong>Trend</strong> shows the data as a trend across 1990,2000, 2012. It ignores the selection of Years in navigation panel, but filters are valid. The chart provides additional selection of filters to lock countries for analysis and trending. </p>
+
+<p><strong>FAQ:</strong>     </p>
+
+<p><em>No Chart shown?</em><br/>
+It is possible that some combination of filters produces no data and may result in no chart being shown. Change filters to view the chart.</p>
+
+<p><em>Data used</em><br/>
+The application uses WHO data on Life Expectancy. The data set used for display can be obtained from <a href="http://apps.who.int/gho/data/node.main.688?lang=en">http://apps.who.int/gho/data/node.main.688?lang=en</a></p>
+
+</body>
+
+</html>

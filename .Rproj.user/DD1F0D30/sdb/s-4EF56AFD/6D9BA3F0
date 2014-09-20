@@ -1,0 +1,17 @@
+{
+    "contents" : "**\"Life Expectancy across Globe - Visual Representation\"** is an application that makes it easy to understand Life expectancy data using visualization.\n\nThe application uses R packages to achieve this. The list of Packages is given below:-    \n\n* Shiny - for publishing the application    \n* GoogleVis - for creating the interactive plots   \n* plyr - for data subsetting  \n\nThe data used by application comes from WHO for Life Expectancy across the world; which is measured under three categories:-   \n\n* Life expectancy at birth   \n* Healthy life expectancy at birth   \n* Life expectancy at age 60   \n\nThe application allows to filter data for visualization on the following categories using the navigation panel on the left:-    \n\n- *Type of life expectancy* - one can select a type that is measured by WHO    \n- *Life Expectancy greater than* - gives a slider to filter data on life expectancy years. Life expectancy greater than the selection is only shown in charts. Default is '0'      \n- *Select Years for which the data should be shown* : WHO has data for 3 years - 1990, 2000, 2012 (Note Trend Tab ignores this data)     \n- *Select population type* - WHO categorizes this into Male, Female and for both. selection can be done to select one      \n- *Select type of countries to be shown* - WHO categorizes countries into 4 income group - High Income Group, Upper Middle Income Group, Lower Middle Income Group, Lower Income Group      \n\nThe application allows two types of visualization that is shown on tabs-\n\n- **Geo**\n- **Trend**\n\n**Geo** shows Life Expectancy on GeoMap using GoogleVis kit. In addition to the GeoMap the data that is used to show the map is shown as tables below. Also, a table is shown that summarises data on Regions. The following type of analysis can be done:-\n\n- Map colour of countries are based on Life expectancy. Moving the Mouse over the country will give name of the country along with life expectancy in year.     \n- Tables columns can be clicked to sort on a column    \n- Navigation Panel can be used to filter data    \n\n**Trend** shows the data as a trend across 1990,2000, 2012. It ignores the selection of Years in navigation panel, but filters are valid. The chart provides additional selection of filters to lock countries for analysis and trending. \n\n**FAQ:**     \n\n*No Chart shown?*          \nIt is possible that some combination of filters produces no data and may result in no chart being shown. Change filters to view the chart.\n  \n*Data used*           \nThe application uses WHO data on Life Expectancy. The data set used for display can be obtained from http://apps.who.int/gho/data/node.main.688?lang=en\n\n",
+    "created" : 1410798243402.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1302761217",
+    "id" : "6D9BA3F0",
+    "lastKnownWriteTime" : 1411210985,
+    "path" : "C:/Users/kumar_000/Desktop/Coursera/ShinyPrj1/help1.Rmd",
+    "project_path" : "help1.Rmd",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_markdown"
+}

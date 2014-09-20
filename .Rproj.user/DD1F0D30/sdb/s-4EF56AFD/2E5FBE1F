@@ -1,0 +1,16 @@
+{
+    "contents" : "\n# This is the user-interface definition of a Shiny web application.\n# You can find out more about building applications with Shiny here:\n#\n# http://shiny.rstudio.com\n#\n\nlibrary(shiny)\nlibrary(googleVis)\n\nshinyUI(pageWithSidebar(\n  # Application title\n        headerPanel(\"Life Expectancy across Globe - visual representation\"),\n        \n\n  # Sidebar with a slider input for number of bins\n \n    sidebarPanel(\n            h5(\"Type of Life Expectancy\"),\n            \n            radioButtons(\"sghoc\", \"\", \n                         choices = c(\"Life expectancy at birth\" = \"WHOSIS_000001\", \n                                     \"Healthy life expectancy (HALE) at birth\" = \"WHOSIS_000002\", \n                                     \"Life expectancy at age 60\" = \"WHOSIS_000015\")),\n#            br(),\n            h5(\"Life Expectancy greater than(in Years)\"),\n            sliderInput(\"year\",\n                  \"\",\n                  min = 0,\n                  max = 100,\n                  value = 0),\n#      br(),\n      h5(\"Select Year for which the data should be shown\"),\n      \n      radioButtons(\"syear\", \"\", selected=\"2012\",\n                  choices = c(\"1990\" = \"1990\", \"2000\" = \"2000\", \"2012\" = \"2012\")),\n#      br(),\n      h5(\"Select for which population:\"),\n      \n      selectInput(\"spop\", \"\", \n                   choices = c(\"Both Sexes\" = \"BTSX\", \"Male\" = \"MLE\", \"Female\" = \"FMLE\")),\n      \n#      br(),\n      h5(\"Select type of Country to be shown               \"),\n      \n      checkboxInput(\"WB_HI\" , \"High Income countries        :\", TRUE), \n      checkboxInput(\"WB_UMI\", \"Upper Middle Income countries:\", TRUE),\n      checkboxInput(\"WB_LMI\", \"Lower Middle Income countries:\", TRUE),\n      checkboxInput(\"WB_LI\" , \"Lower Income countries       :\", TRUE)            \n    ,width=3),\n\n    # Show a plot of the generated distribution\n    mainPanel(                 \n                 tabsetPanel(\n                         tabPanel(\"Geo\",\n                                  h4(\"GeoMap View of Life expectancy\"),\n                                  textOutput(\"caption1\"),\n                                  p(\"(Data used is from WHO)\"),\n                                  textOutput(\"caption\"),\n                                  htmlOutput(\"mplot1\")),\n                         tabPanel(\"Trend\",h4(\"Life expectancy trend\"),\n                                  textOutput(\"caption2\"),\n                                  p(\"(Data used is from WHO)\"),\n                                  textOutput(\"caption3\"),\n                                  htmlOutput(\"mplot2\")),\n                         tabPanel(\"Help\",h4(\"Help\"),includeMarkdown(\"help1.md\"))\n                                                  \n                         )\n    )\n  )\n)\n",
+    "created" : 1410701437536.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1966076640",
+    "id" : "2E5FBE1F",
+    "lastKnownWriteTime" : 1411204298,
+    "path" : "C:/Users/kumar_000/Desktop/Coursera/ShinyPrj1/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
